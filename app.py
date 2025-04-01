@@ -47,7 +47,6 @@ if uploaded_file is not None:
 
 
         # finding the busiest users in the groups
-        if selected_user != "overall":
-            st.subheader("Busiest Users")
-            busiest_users = df[df['user'] == selected_user].groupby('user')['message'].count().reset_index().nlargest(5, 'message')
-            st.dataframe(busiest_users)
+        if selected_user == "overall":
+            st.subheader("Most Busiest Users")
+            col1, col2 = st.beta_columns(2)
