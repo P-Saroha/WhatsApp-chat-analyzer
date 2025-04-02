@@ -82,4 +82,59 @@ def extract_emojis(selected_user,df):
     return emoji_df
     
 
+## monthly message timeline chart
+
+def monthly_timeline(selected_user,df):
+    if selected_user !="overall":
+        df = df[df['user'] == selected_user]
+
+    timeline = df.groupby(['year','month_num','month']).count()['message'].reset_index()
+
+    time = []
+    for i in range(timeline.shape[0]):
+        time.append(timeline['month'][i] + '-' + str(timeline['year'][i]))
+
+    timeline['time'] = time
+
+    return timeline
+
+
+## daily message timeline
+
+def daily_timeline(selected_user,df):
+    if selected_user !="overall":
+        df = df[df['user'] == selected_user]
+
     
+
+    daily_timeline = df.groupby('message_in_a_day').count()['message'].reset_index()
+
+    return daily_timeline
+
+## weekly chat 
+
+def weekly_chat(selected_user,df):
+    if selected_user !="overall":
+        df = df[df['user'] == selected_user]
+
+    weekly_chat = df['day_name'].value_counts()
+    return weekly_chat
+
+## month activity chart 
+
+def month_activity(selected_user,df):
+    if selected_user !="overall":
+        df = df[df['user'] == selected_user]
+
+    return df['month'].value_counts()
+
+## heatmap of chat by time (means when most chat happen)
+
+def chat_heatmap(selected_user,df):
+    if selected_user !="overall":
+        df = df[df['user'] == selected_user]
+
+    heatmap = df.pivot_table(index='day_name',columns='period', values='message', aggfunc= 'count').fillna(0)
+    return heatmap
+
+
