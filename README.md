@@ -17,9 +17,6 @@ WhatsApp Chat Analyzer is a powerful tool designed to help users gain insights f
 2. **Upload** the chat file to the analyzer.  
 3. **Explore** the generated insights and visualizations.
 
-## Note
-- Ensure your chat data is formatted correctly before pasting it into the tool.
-- The time format used in the analysis is **24-hour format**, so interpret the results accordingly.
 
 ## 🔧 Installation (For Local Setup)  
 ```bash  
