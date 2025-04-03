@@ -1,6 +1,6 @@
 # WhatsApp Chat Analyzer  
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue)](https://whatsapp-chat-analyzer-fvaq.onrender.com)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue)](https://whatsapp-chat-analyzer-vrv2.onrender.com)
 
 ## 📌 About  
 WhatsApp Chat Analyzer is a powerful tool designed to help users gain insights from their personal or group chat data. It provides detailed analytics on message activity, most active users, emoji usage, word frequency, and more!  
